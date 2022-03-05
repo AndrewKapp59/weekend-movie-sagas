@@ -1,8 +1,8 @@
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
-
-function MovieDetails {
+// displays the selected movie and it's details 
+function MovieDetails() {
    const selectedMovie = useSelector((store) => store.selectedMovie)
 
    useEffect (() => {
@@ -18,12 +18,14 @@ function MovieDetails {
           <>
             <h3>{selectedMovie.title}</h3>
             <img src={selectedMovie.poster} alt={movie.title}/>
-            {/* <h4>{selectedMovie.name}</h4> */}
             <p>{selectedMovie.description}</p>
-
           </>
+        ) : (
+          <p>No Movie Selected</p>
         )
       }
     </section>
-  )
+  );
 }
+
+export default MovieDetails;

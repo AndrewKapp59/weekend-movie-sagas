@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import MovieItem from '../MovieItem/MovieItem'
 // import ImageList from '@mui/material/ImageList';
 // import ImageListItem from '@mui/material/ImageListItem';
 // import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -21,12 +22,17 @@ function MovieList() {
         <main>
             <h1>MovieList</h1>
             <section className="movies">
-                {movies.map(movie => {
+                {movies.map((movie, index) => {
+                    const title = movie.title;
+                    const poster = movie.poster;
+                    const id = movie.id;
                     return (
-                        <div key={movie.id} >
-                            <h3>{movie.title}</h3>
-                            <img src={movie.poster} alt={movie.title}/>
-                        </div>
+                       <MovieItem 
+                          key={index}
+                          title={title}
+                          poster={poster}
+                          id={id}
+                       />
                     );
                 })}
             </section>
