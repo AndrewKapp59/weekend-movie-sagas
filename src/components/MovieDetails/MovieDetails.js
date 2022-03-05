@@ -19,6 +19,13 @@ function MovieDetails() {
             <h3>{selectedMovie.title}</h3>
             <img src={selectedMovie.poster} alt={movie.title}/>
             <p>{selectedMovie.description}</p>
+            {selectedMovie.genres.map((genre, index) => {
+                    return (
+                      <ul>
+                        <li key={index}>{genre}</li>
+                      </ul>
+                    );
+                })}
           </>
         ) : (
           <p>No Movie Selected</p>
