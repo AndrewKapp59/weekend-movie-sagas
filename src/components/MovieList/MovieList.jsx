@@ -23,15 +23,10 @@ function MovieList() {
             <h1>MovieList</h1>
             <section className="movies">
                 {movies.map((movie, index) => {
-                    const title = movie.title;
-                    const poster = movie.poster;
-                    const id = movie.id;
                     return (
                        <MovieItem 
                           key={index}
-                          title={title}
-                          poster={poster}
-                          id={id}
+                          movie={movie} 
                        />
                     );
                 })}
