@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(199, 233, 255);
 }
 
 
@@ -32,5 +33,5 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #607d8b;
+  background-color: #66a9e9;
 }

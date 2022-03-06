@@ -7,8 +7,6 @@ import AddTitle from './AddTitle';
 import AddPoster from './AddPoster'
 import AddDescription from './AddDescription';
 
-const ariaLabel = { 'aria-label': 'description' };
-
 const MovieForm = () => {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -22,12 +20,13 @@ const MovieForm = () => {
       <AddPoster />
       <AddGenres />
       <AddDescription />
+      <Button type="submit" variant="contained">
+        Save
+      </Button>
+      <Button type="" variant="contained">
+        Cancel
+      </Button>
 
-      <div className="next">
-        <Button type="submit" variant="contained">
-          Submit
-        </Button>
-      </div>
     </div>
     </form>
   );
