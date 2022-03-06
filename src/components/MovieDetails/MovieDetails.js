@@ -12,18 +12,17 @@ function MovieDetails() {
   return(
     <section>
       <h1>Selected Movie</h1>
-      <h2>Route: localhost:3000/#/details</h2>
       {
         selectedMovie.title ? (
           <>
             <h3>{selectedMovie.title}</h3>
-            <img src={selectedMovie.poster} alt={movie.title}/>
+            <img src={selectedMovie.poster} alt={selectedMovie.title}/>
             <p>{selectedMovie.description}</p>
             {selectedMovie.genres.map((genre, index) => {
                     return (
-                      <ul>
-                        <li key={index}>{genre}</li>
-                      </ul>
+
+                        <div key={index}>{genre}</div>
+
                     );
                 })}
           </>

@@ -11,10 +11,10 @@ function App() {
       <Router> 
       <div className="navBar">
         <Button variant="text">
-          <Link to="/" style={{ textDecoration: 'none', color: 'blue' }}>Home</Link>
+          <Link to="/" style={{ textDecoration: 'none', color: 'white' }}>Home</Link>
         </Button>
         <Button variant="text">
-          <Link to="/details" style={{ textDecoration: 'none', color: 'blue' }}>Details</Link>
+          <Link to="/details" style={{ textDecoration: 'none', color: 'white' }}>Details</Link>
         </Button>
       </div>
         <h1>The Movies Saga!</h1>

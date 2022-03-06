@@ -22,3 +22,15 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.navBar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #607d8b;
+}

@@ -2,9 +2,12 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 function MovieItem({movie}) {
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleSelectedMovie = (movie) => {
-    dispatchEvent({type: 'SET_SELECTED_MOVIE', payload: movie })
+    dispatch({type: 'SET_SELECTED_MOVIE', payload: movie });
+    history.push('/details')
   }
 
   const title = movie.title;
