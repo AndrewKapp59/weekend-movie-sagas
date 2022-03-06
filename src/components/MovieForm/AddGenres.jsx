@@ -62,11 +62,11 @@ function AddGenres() {
 
   return (
     <div>
-      <FormControl sx={{ m: 1, width: 300 }}>
-        <InputLabel id="demo-multiple-chip-label">Chip</InputLabel>
+      <FormControl sx={{ m: 1, width: 350 }}>
+        <InputLabel id="chip-label" >Genre</InputLabel>
         <Select
-          labelId="demo-multiple-chip-label"
-          id="demo-multiple-chip"
+          labelId="multiple-chip-label"
+          id="multiple-chip"
           multiple
           value={genreName}
           onChange={handleChange}
@@ -74,7 +74,7 @@ function AddGenres() {
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
               {selected.map((value) => (
-                <Chip key={value.name} label={value.name} />
+                <Chip key={value} label={value} />
               ))}
             </Box>
           )}
@@ -82,11 +82,11 @@ function AddGenres() {
         >
           {genres.map((genre) => (
             <MenuItem
-              key={genre}
-              value={genre}
-              style={getStyles(genre, genreName, theme)}
+              key={genre.name}
+              value={genre.name}
+              style={getStyles(genre.name, genreName, theme)}
             >
-              {genre}
+              {genre.name}
             </MenuItem>
           ))}
         </Select>
