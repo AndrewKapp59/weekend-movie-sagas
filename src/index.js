@@ -61,12 +61,61 @@ const genres = (state = [], action) => {
     }
 }
 
+const newMovie = (state = {
+    title: '',
+    url: '',
+    description: '',
+    genre: [],
+  }, action) => {
+  
+    if (action.type === 'ADD_TITLE') {
+  
+        const { title } = action.payload;
+  
+        return {
+            ...state,
+            title: title,
+        }
+    }
+    if (action.type === 'ADD_URL') {
+  
+        const { url } = action.payload;
+  
+        return {
+            ...state,
+            url: url,
+        }
+    }
+    if (action.type === 'ADD_SUPPORT') {
+  
+        const { description } = action.payload;
+  
+        return {
+            ...state,
+            description: description,
+        }
+    }
+    if (action.type === 'ADD_GENRE') {
+  
+        const { genre } = action.payload;
+  
+        return {
+            ...state,
+            genre: genre,
+        }
+    }
+  
+    return state;
+  }
+
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
         selectedMovie,
+        newMovie
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),

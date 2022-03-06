@@ -11,7 +11,7 @@ const MovieForm = () => {
     <>
       <form onSubmit={handleSubmit} className='movie-form'>
         <TextField
-          placeholder='Enter Title'
+          placeholder='Enter movie description'
           onChange={(event) => {
             setTitle(event.target.value);
           }}
