@@ -1,14 +1,14 @@
 import { TextField} from '@mui/material';
 
 
-function AddTitle() {
+function AddPoster() {
 
   return(
-    <div className="addTitle">
+    <div className="addPoster">
       <TextField
-        sx={{ m:1, width: 350 }}
+        sx={{ m: 1, width: 350 }}
         required
-        label="Movie Title"
+        label="Poster URL"
         color="primary"
         autoComplete="off"
       />
@@ -16,4 +16,7 @@ function AddTitle() {
   )
 }
 
-export default AddTitle;
+export default AddPoster;
+
+
+

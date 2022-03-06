@@ -63,7 +63,7 @@ function AddGenres() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: 350 }}>
-        <InputLabel id="chip-label" >Genre</InputLabel>
+        <InputLabel id="chip-label">Genre</InputLabel>
         <Select
           labelId="multiple-chip-label"
           id="multiple-chip"
