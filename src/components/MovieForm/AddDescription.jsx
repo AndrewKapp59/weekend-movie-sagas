@@ -3,37 +3,36 @@ import React, { useState } from 'react';
 import { TextField, Button} from '@mui/material';
 
 
-function AddDescription() {
-  const [description, setDescription] = useState('');
+function AddDescription(event) {
 
   const dispatch = useDispatch();
 
+  // set description state
+  const [description, setDescription] = useState();
 
-  const handleDESubmit = (event) => {
+  const addDescription =(event) => {
     event.preventDefault();
-
+    setTitle(event.target.value)
     dispatch({
-      type: 'ADD_DESCRIPTION',
+      type: "ADD_DESCRIPTION",
       payload: { description },
     });
-
-    setComments('');
-
-    history.push('/review');
-  };
+  }
 
 
   return(
     <div className="addDescription">
       <TextField
-        // id="standard-multiline-flexible"
-        // multiline
+        id="standard-multiline-flexible"
+        multiline
         maxRows={5}
         sx={{ color: 'white' , mt: 1, mb: 1, width: 350 }}
         required
         label="Movie Description"
         color="primary"
         autoComplete="off"
+        onChange={(event) => {addDescription}}
+        value={description}
       />
     </div>
   )

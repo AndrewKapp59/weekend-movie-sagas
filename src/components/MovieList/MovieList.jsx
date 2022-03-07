@@ -17,11 +17,11 @@ function MovieList() {
 
     return (
         <main>
-            <h1>MovieList</h1>
+            <h1></h1>
             <Grid container spacing={2}>
                 {movies.map((movie, index) => {
                     return (
-                        <Grid item xs={2}>
+                        <Grid key={index}item xs={2}>
                            <MovieItem 
                               key={index}
                               movie={movie} 

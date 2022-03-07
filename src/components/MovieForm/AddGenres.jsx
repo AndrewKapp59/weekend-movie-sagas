@@ -21,21 +21,6 @@ const MenuProps = {
   },
 };
 
-
-
-// const genres = [
-//   'Oliver Hansen',
-//   'Van Henry',
-//   'April Tucker',
-//   'Ralph Hubbard',
-//   'Omar Alexander',
-//   'Carlos Abbott',
-//   'Miriam Wagner',
-//   'Bradley Wilkerson',
-//   'Virginia Andrews',
-//   'Kelly Snyder',
-// ];
-
 function getStyles(genre, genreName, theme) {
   return {
     fontWeight:
@@ -46,7 +31,8 @@ function getStyles(genre, genreName, theme) {
 }
 
 function AddGenres() {
-  const genres = useSelector(store => store.genres)
+  const dispatch = useDispatch();
+  const genres = useSelector((store) => store.genres);
   const theme = useTheme();
   const [genreName, setGenreName] = React.useState([]);
 
@@ -56,8 +42,14 @@ function AddGenres() {
     } = event;
     setGenreName(
       // On autofill we get a stringified value.
-      typeof value === 'string' ? value.split(',') : value,
+      typeof value === 'string' ? value.split(',') : value
     );
+
+    dispatch({
+      type: "ADD_GENRE",
+      payload: {genreName},
+    });
+
   };
 
   return (
@@ -65,6 +57,7 @@ function AddGenres() {
       <FormControl sx={{ m: 1, width: 350 }}>
         <InputLabel id="chip-label">Genre</InputLabel>
         <Select
+          required
           labelId="multiple-chip-label"
           id="multiple-chip"
           multiple
