@@ -2,13 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MovieItem from '../MovieItem/MovieItem'
 import Grid from '@mui/material/Grid';
-// import ImageList from '@mui/material/ImageList';
-// import ImageListItem from '@mui/material/ImageListItem';
-// import ImageListItemBar from '@mui/material/ImageListItemBar';
-// import ListSubheader from '@mui/material/ListSubheader';
-// import IconButton from '@mui/material/IconButton';
-// import InfoIcon from '@mui/icons-material/Info';
+import Divider from '@mui/material/Divider';
 import './MovieList.css'
+import { blueGrey } from '@mui/material/colors';
 
 function MovieList() {
 

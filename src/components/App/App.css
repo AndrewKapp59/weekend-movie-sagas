@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  background-color: rgb(199, 233, 255);
+  background-image: url(1155.jpg);
+  background-repeat: repeat-x repeat-y;
+  background-size: 450px;
 }
 
 
@@ -33,5 +35,5 @@
   padding-left: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  background-color: #66a9e9;
+  background-color: #0b4272;
 }

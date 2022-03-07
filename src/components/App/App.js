@@ -21,7 +21,6 @@ function App() {
           <Link to="/form" style={{ textDecoration: 'none', color: 'white' }}>Add Movie</Link>
         </Button>
       </div>
-        <h1>The Movies Saga!</h1>
         {/* Home */}
         <Route path="/" exact>
           <MovieList />
